@@ -4,13 +4,11 @@
 ## Class and Object
     - Class and Object Class
         -class
-            > Blueprint or design for object
-            >
-
+            'Blueprint or design for object''
         -Object
-            > Real Entity
+            ' Real Entity
              fields->variables
              Methods
-            >
+            ''
     - Department class
     - Student Class
