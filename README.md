@@ -5,9 +5,12 @@
     - Class and Object Class
         -class
             > Blueprint or design for object
+            >
+
         -Object
             > Real Entity
-            > fields->variables
-            > Methods
+             fields->variables
+             Methods
+            >
     - Department class
     - Student Class
