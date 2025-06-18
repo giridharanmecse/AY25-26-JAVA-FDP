@@ -1,0 +1,27 @@
+Question 1:
+Description:
+You are required to build a Bank Management System using Java Object-Oriented Programming concepts. The system should allow the creation and handling of two types of bank accounts: Savings Account and Current Account. The system must also manage basic customer information.
+Your implementation must strictly demonstrate all four major OOPs principles:
+•	Encapsulation
+•	Abstraction
+•	Inheritance
+•	Polymorphism
+
+Sample Input and output:
+
+
+Enter Customer Name: Pavithra
+Enter Customer ID: C001
+Enter Email: pavithra@gmail.com
+Choose Account Type (1. Savings  2. Current): 1
+Enter Account Number: SA101
+Enter amount to deposit: 6000
+Deposited ₹6000.0 into Savings Account.
+Enter amount to withdraw: 2000
+Withdrawn ₹2000.0 from Savings Account.
+
+--- Savings Account Details ---
+Customer Name: Pavithra
+Account Number: SA101
+Balance: ₹4000.0
+Interest Rate: 5.0%

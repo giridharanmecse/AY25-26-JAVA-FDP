@@ -1,0 +1,236 @@
+1. Class
+2. Object
+3. Encapsulation
+4. Abstraction
+5. Inheritance
+6. Polymorphism
+7. Association
+8. Aggregation
+9. Composition
+10. Coupling
+11. Cohesion
+12. Constructor
+13. Destructor
+
+Definition of Class:
+A class is a blueprint or template in object-oriented programming that defines the properties (attributes) and behaviors (methods) of objects. It encapsulates data for the object and methods to manipulate that data.
+
+Advantages of Class:
+1. Reusability: Classes allow code to be reused through inheritance.
+2. Modularity: Code is organized into logical units, making it easier to manage.
+3. Encapsulation: Data and methods are bundled together, improving security and integrity.
+4. Easy Maintenance: Changes in a class can be made independently without affecting other code.
+
+Disadvantages of Class:
+1. Increased Complexity: Object-oriented design can be more complex than procedural programming for simple tasks.
+2. Overhead: Classes may introduce additional memory and processing overhead.
+3. Steep Learning Curve: Understanding concepts like inheritance and polymorphism can be challenging for beginners.
+
+Example in Java:
+// Example of a simple class in Java
+class Car {
+    // Properties (attributes)
+    String color;
+    String model;
+    int year;
+
+    // Constructor
+    Car(String color, String model, int year) {
+        this.color = color;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Method (behavior)
+    void displayInfo() {
+        System.out.println("Car Model: " + model + ", Color: " + color + ", Year: " + year);
+    }
+}
+
+// Usage
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car("Red", "Toyota", 2022);
+        myCar.displayInfo();
+    }
+}
+
+Definition of Object:
+An object is an instance of a class in object-oriented programming. It represents a real-world entity with a unique identity, state (attributes), and behavior (methods) as defined by its class.
+
+Advantages of Object:
+1. Real-world Modeling: Objects help model real-world entities, making programs easier to understand.
+2. Data Security: Objects encapsulate data, restricting direct access and improving security.
+3. Code Reusability: Objects can be reused across programs, reducing redundancy.
+4. Modularity: Objects divide the program into smaller, manageable parts.
+
+Disadvantages of Object:
+1. Memory Usage: Each object consumes memory, which can be significant in large applications.
+2. Performance Overhead: Object creation and management may introduce performance overhead.
+3. Complexity: Managing multiple objects and their interactions can increase program complexity.
+
+Example in Java:
+// Example of creating and using an object in Java
+class Student {
+    String name;
+    int age;
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        Student student1 = new Student("Alice", 20); // student1 is an object of Student class
+        student1.display();
+    }
+}
+
+Definition of Encapsulation:
+Encapsulation is an object-oriented programming principle that combines data (attributes) and methods (functions) into a single unit called a class. It restricts direct access to some of an object's components, usually by making variables private and providing public getter and setter methods to access and modify them.
+
+Advantages of Encapsulation:
+1. Data Hiding: Sensitive data is hidden from outside access, improving security.
+2. Controlled Access: Access to data is controlled through getter and setter methods.
+3. Flexibility and Maintenance: Internal implementation can be changed without affecting external code.
+4. Increased Modularity: Each object manages its own state, making code easier to manage and debug.
+
+Disadvantages of Encapsulation:
+1. Increased Code: Requires additional code for getter and setter methods.
+2. Performance Overhead: Accessing data through methods can be slightly slower than direct access.
+3. Complexity: May add complexity for very simple classes or programs.
+
+Example in Java:
+// Example of encapsulation in Java
+class Person {
+    // Private data members
+    private String name;
+    private int age;
+
+    // Public getter method for name
+    public String getName() {
+        return name;
+    }
+
+    // Public setter method for name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Public getter method for age
+    public int getAge() {
+        return age;
+    }
+
+    // Public setter method for age
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        }
+    }
+}
+
+public class TestEncapsulation {
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.setName("Bob");
+        p.setAge(25);
+        System.out.println("Name: " + p.getName() + ", Age: " + p.getAge());
+    }
+}
+Definition of Abstraction:
+Abstraction is an object-oriented programming principle that focuses on exposing only the essential features of an object while hiding the unnecessary implementation details. It helps in reducing complexity and allows the programmer to focus on what an object does instead of how it does it.
+
+Advantages of Abstraction:
+1. Reduces Complexity: By hiding implementation details, abstraction simplifies the design and usage of complex systems.
+2. Increases Security: Sensitive implementation details are hidden from the user.
+3. Enhances Flexibility: Changes in implementation do not affect users of the abstraction.
+4. Improves Code Reusability: Abstracted code can be reused in different contexts.
+
+Disadvantages of Abstraction:
+1. Performance Overhead: Additional layers of abstraction can introduce performance overhead.
+2. Debugging Difficulty: Errors in the hidden implementation can be harder to trace.
+3. Incomplete Implementation: Over-abstraction may lead to incomplete or unclear implementations.
+
+Types of Abstraction in Java:
+1. Data Abstraction
+2. Procedural Abstraction
+
+1. Data Abstraction:
+Data abstraction refers to providing only essential information about the data to the outside world and hiding the background details. In Java, this is achieved using abstract classes and interfaces.
+
+Example of Data Abstraction using Abstract Class:
+// Abstract class example (Data Abstraction)
+abstract class Animal {
+    // Abstract method (no implementation)
+    abstract void makeSound();
+
+    // Concrete method
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    // Providing implementation for abstract method
+    void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class AbstractionDemo {
+    public static void main(String[] args) {
+        Animal myDog = new Dog();
+        myDog.makeSound(); // Output: Dog barks
+        myDog.eat();       // Output: This animal eats food.
+    }
+}
+
+Example of Data Abstraction using Interface:
+// Interface example (Data Abstraction)
+interface Shape {
+    void draw(); // abstract method
+}
+
+class Circle implements Shape {
+    public void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+
+class Rectangle implements Shape {
+    public void draw() {
+        System.out.println("Drawing a rectangle");
+    }
+}
+
+public class InterfaceAbstractionDemo {
+    public static void main(String[] args) {
+        Shape s1 = new Circle();
+        Shape s2 = new Rectangle();
+        s1.draw(); // Output: Drawing a circle
+        s2.draw(); // Output: Drawing a rectangle
+    }
+}
+// Example of Procedural Abstraction
+// The user only needs to know what the method does, not how it does it.
+class MathOperations {
+    // Procedural abstraction: user knows this method adds two numbers
+    int add(int a, int b) {
+        return a + b; // Implementation detail is hidden
+    }
+}
+
+public class ProceduralAbstractionDemo {
+    public static void main(String[] args) {
+        MathOperations math = new MathOperations();
+        int result = math.add(5, 3); // User only cares about the result
+        System.out.println("Sum: " + result); // Output: Sum: 8
+    }
+}
